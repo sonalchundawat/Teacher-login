@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Page -->
+  <section id="login-page">
+    <h2>Teacher Login</h2>
+    <form id="login-form">
+      <label for="teacher-name">Name:</label>
+      <input type="text" id="teacher-name" required>
+      <label for="teacher-password">Password:</label>
+      <input type="password" id="teacher-password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="signup-message">Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+  </section>
+
+  <!-- Dashboard Section (Only Visible if Logged In) -->
+  <section id="attendance-dashboard" style="display: none;">
+    <h2>Attendance Dashboard</h2>
+
+    <button id="logout-btn">Logout</button>
+
+    <!-- Form to Add Students -->
+    <form id="student-form">
+      <h3>Add Student</h3>
+      <label for="student-name">Name:</label>
+      <input type="text" id="student-name" required>
+      <label for="student-id">Student ID:</label>
+      <input type="text" id="student-id" required>
+      <label for="student-class">Class:</label>
+      <input type="text" id="student-class" required>
+      <button type="submit">Add Student</button>
+    </form>
+
+    <!-- Attendance Filters -->
+    <div id="filters">
+      <button id="filter-all">All</button>
+      <button id="filter-present">Present</button>
+      <button id="filter-absent">Absent</button>
+    </div>
+
+    <!-- Student List Table -->
+    <table id="student-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Status</th>
+          <th>Mark Attendance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic content will be injected here -->
+      </tbody>
+    </table>
+
+    <!-- Reset Button -->
+    <button id="reset-attendance">Reset Attendance</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
